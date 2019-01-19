@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CasusWandelapp.LogInPage">
+
+
+    <StackLayout VerticalOptions="Center" Margin="20">
+
+        <Label x:Name="loginLabel" Text="Welkom in onze APP, gelieve hier in te loggen."
+               HorizontalOptions="Center"
+               Margin="0,0,0,30"
+               TextColor="Black"/>
+
+        <Entry x:Name="emailEntry" 
+               Placeholder="Email Address"
+               Keyboard="Email"
+               TextColor="Black"/>
+
+        <Entry x:Name="passwordEntry" 
+               Placeholder="Password"
+               IsPassword="True"
+               TextColor="Black"/>
+
+        <Button x:Name="LoginButton" 
+                Margin="0,50,0,0" 
+                Text="Log in" 
+                Clicked="LoginButton_Clicked" 
+                Style="{StaticResource ButtonStyle}"/>
+    </StackLayout>
+    
+</ContentPage>
