@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasusWandelapp.iOS", "Casus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasusWandelapp.UWP", "CasusWandelapp\CasusWandelapp.UWP\CasusWandelapp.UWP.csproj", "{6731CEEC-1631-4F50-A84C-E70F270FD060}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasusWandelapp", "CasusWandelapp\CasusWandelapp\CasusWandelapp.csproj", "{7A0B0BCA-AD2F-4F6D-A35D-4302FB17A336}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasusWandelapp", "CasusWandelapp\CasusWandelapp\CasusWandelapp.csproj", "{7A0B0BCA-AD2F-4F6D-A35D-4302FB17A336}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

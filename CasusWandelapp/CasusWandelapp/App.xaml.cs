@@ -10,8 +10,7 @@ namespace CasusWandelapp
         public App()
         {
             InitializeComponent();
-
-            MainPage = new LogInPage();
+			MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()
