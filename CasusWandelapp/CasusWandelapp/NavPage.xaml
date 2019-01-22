@@ -6,8 +6,14 @@
     
   <MasterDetailPage.Master>
         <ContentPage Title="Menu"
-                   BackgroundColor="Red">
+                     BackgroundColor="Red">
             <StackLayout Orientation="Vertical">
+                <Label Text="{Binding Header}"
+                       TextColor="White"
+                       FontSize="Large"
+                       Font="Bold,20"
+                       XAlign="Center"/>
+
                 <ListView x:Name="navigationDrawerList"
                           RowHeight="55"
                           SeparatorVisibility="Default"

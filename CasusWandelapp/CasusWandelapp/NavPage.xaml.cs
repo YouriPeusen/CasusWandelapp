@@ -23,16 +23,23 @@ namespace CasusWandelapp
 			var page1 = new MasterPageItem() { Title = "Map", TargetType = typeof(MainPage) };
 			var page2 = new MasterPageItem() { Title = "Mijn Routes", TargetType = typeof(MyRoutes) };
 			var page3 = new MasterPageItem() { Title = "Mijn POI's", TargetType = typeof(MyPOI) };
-			var page4 = new MasterPageItem() { Title = "Uitloggen", TargetType = typeof(LoginPage) };
+			var page4 = new MasterPageItem() { Title = "Historie", TargetType = typeof(History) };
+			var page5 = new MasterPageItem() { Title = "Uitloggen", TargetType = typeof(LoginPage) };
 
 			Menulist.Add(page1);
 			Menulist.Add(page2);
 			Menulist.Add(page3);
 			Menulist.Add(page4);
+			Menulist.Add(page5);
 
 			navigationDrawerList.ItemsSource = Menulist;
 
 			Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(MainPage)));
+
+			this.BindingContext = new
+			{
+				Header = "Wandelapp"
+			};
 		}
 
         private void NavigationDrawerList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
