@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 
 namespace CasusWandelapp.Views
@@ -14,7 +15,7 @@ namespace CasusWandelapp.Views
 	{
 		public MyRoutes ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 		}
 	}
 }

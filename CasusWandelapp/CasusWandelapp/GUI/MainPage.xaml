@@ -5,6 +5,7 @@
              x:Class="CasusWandelapp.MainPage">
 
     <maps:Map x:Name="locationsMap" 
+              MapType="Street"
               HorizontalOptions="FillAndExpand"
               VerticalOptions="FillAndExpand"/>
 

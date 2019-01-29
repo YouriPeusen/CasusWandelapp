@@ -7,9 +7,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CasusWandelapp.BU;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.Maps;
 
 namespace CasusWandelapp
 {
@@ -22,9 +24,9 @@ namespace CasusWandelapp
         {
             InitializeComponent();
             GetPermissions();
-        }
+		}
 
-        private async void GetPermissions()
+		private async void GetPermissions()
         {
             try
             {
@@ -88,7 +90,7 @@ namespace CasusWandelapp
 
         void Locator_PositionChanged(object sender, PositionEventArgs e)
         {
-            MoveMap(e.Position);
+			MoveMap(e.Position);
         }
 
         private async void GetLocation()
@@ -102,7 +104,7 @@ namespace CasusWandelapp
             }
         }
 
-        private void MoveMap(Position position)
+        private void MoveMap(Plugin.Geolocator.Abstractions.Position position)
         {
             var center = new Xamarin.Forms.Maps.Position(position.Latitude, position.Longitude);
             var span = new Xamarin.Forms.Maps.MapSpan(center, 1, 1);

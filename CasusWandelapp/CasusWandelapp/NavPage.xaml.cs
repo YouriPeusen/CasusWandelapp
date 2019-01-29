@@ -25,12 +25,14 @@ namespace CasusWandelapp
 			var page3 = new MasterPageItem() { Title = "Mijn POI's", TargetType = typeof(MyPOI) };
 			var page4 = new MasterPageItem() { Title = "Historie", TargetType = typeof(History) };
 			var page5 = new MasterPageItem() { Title = "Uitloggen", TargetType = typeof(LoginPage) };
+			var page6 = new MasterPageItem() { Title = "Test Map", TargetType = typeof(RouteTryOut) };
 
 			Menulist.Add(page1);
 			Menulist.Add(page2);
 			Menulist.Add(page3);
 			Menulist.Add(page4);
 			Menulist.Add(page5);
+			Menulist.Add(page6);
 
 			navigationDrawerList.ItemsSource = Menulist;
 

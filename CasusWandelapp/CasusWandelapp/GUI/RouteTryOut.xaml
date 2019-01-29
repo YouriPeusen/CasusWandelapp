@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 			 xmlns:local="clr-namespace:CasusWandelapp.BU"
-             x:Class="CasusWandelapp.Views.MyRoutes">
+             x:Class="CasusWandelapp.Views.RouteTryOut">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-            <Label Text="My POI Page" />
-        </StackLayout>
+        <local:CustomMap x:Name="customMap" 
+                         MapType="Street" 
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand" />
     </ContentPage.Content>
 </ContentPage>
