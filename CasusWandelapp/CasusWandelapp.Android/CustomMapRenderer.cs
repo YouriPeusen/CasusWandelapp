@@ -21,7 +21,7 @@ using static CasusWandelapp.BU.Route;
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
 namespace CasusWandelapp.Droid
 {
-	public class CustomMapRenderer : MapRenderer, GoogleMap.IInfoWindowAdapter
+	public class CustomMapRenderer : MapRenderer
 	{
 		List<Position> routeCoordinates;
 		List<RouteStartPoint> routeStartPoints;
@@ -38,7 +38,6 @@ namespace CasusWandelapp.Droid
 			if (e.OldElement != null)
 			{
 				NativeMap.InfoWindowClick -= OnInfoWindowClick;
-				NativeMap.SetInfoWindowAdapter(this);
 			}
 
 			if (e.NewElement != null)
@@ -65,7 +64,6 @@ namespace CasusWandelapp.Droid
 			NativeMap.AddPolyline(polylineOptions);
 
 			NativeMap.InfoWindowClick += OnInfoWindowClick;
-			NativeMap.SetInfoWindowAdapter(this);
 		}
 
 		protected override MarkerOptions CreateMarker(Pin pin)
@@ -74,7 +72,6 @@ namespace CasusWandelapp.Droid
 			marker.SetPosition(new LatLng(pin.Position.Latitude, pin.Position.Longitude));
 			marker.SetTitle(pin.Label);
 			marker.SetSnippet(pin.Address);
-			//marker.SetIcon(BitmapDescriptorFactory.FromResource(Resource.Drawable.pin));
 			return marker;
 		}
 
@@ -94,45 +91,6 @@ namespace CasusWandelapp.Droid
 				Android.App.Application.Context.StartActivity(intent);
 			}
 		}
-
-		//public Android.Views.View GetInfoContents (Marker marker)
-		//{
-		//	var inflater = Android.App.Application.Context.GetSystemService(Context.LayoutInflaterService) as Android.Views.LayoutInflater;
-		//	if (inflater != null)
-		//	{
-		//		Android.Views.View view;
-
-		//		var routeStartPoint = GetCustomPin(marker);
-		//		if (routeStartPoint == null)
-		//		{
-		//			throw new Exception("Custom pin not found");
-		//		}
-
-		//		if (routeStartPoint.Id.ToString() == "Firstpin")
-		//		{
-		//			view = inflater.Inflate(Resource.Layout.XamarinMapInfoWindow, null);
-		//		}
-		//		else
-		//		{
-		//			view = inflater.Inflate(Resource.Layout.MapInfoWindow, null);
-		//		}
-
-		//		//var infoTitle = view.FindViewById<TextView>(/*Resource.Id.InfoWindowTitle*/);
-		//		//var infoSubtitle = view.FindViewById<TextView>(/*Resource.Id.InfoWindowSubtitle*/);
-				
-		//		//if (infoTitle != null)
-		//		//{
-		//		//	infoTitle.Text = marker.Title;
-		//		//}
-		//		//if (infoSubtitle != null)
-		//		//{
-		//		//	infoSubtitle.Text = marker.Snippet;
-		//		//}
-
-		//		return view;
-		//	}
-		//	return null;
-		//}
 
 		public Android.Views.View GetInfoWindow(Marker marker)
 		{

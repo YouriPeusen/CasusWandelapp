@@ -21,7 +21,7 @@ namespace CasusWandelapp.Views
 			var pin = new RouteStartPoint
 			{
 				Type = PinType.Place,
-				Position = new Position(5.959566, 50.881335),
+				Position = new Position(37.797534, -122.401827),
 				Label = "First pin try",
 				Address = "Adres van de pin",
 				Id = "Firstpin"
