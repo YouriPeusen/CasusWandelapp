@@ -52,9 +52,9 @@ namespace CasusWandelapp.Droid
 		protected override void OnMapReady(GoogleMap map)
 		{
 			base.OnMapReady(map);
-
 			NativeMap.InfoWindowClick += OnInfoWindowClick;
 		}
+		
 
 		protected override MarkerOptions CreateMarker(Pin pin)
 		{

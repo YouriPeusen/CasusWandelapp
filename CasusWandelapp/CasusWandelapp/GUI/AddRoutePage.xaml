@@ -15,7 +15,7 @@
                        Text="Selecteer een optie"/>
             </Grid>
             <maps:Map Grid.Row="1"
-                      x:Name="locationsMap" 
+                      x:Name="addRouteMap" 
                       MapType="Street"
                       HorizontalOptions="FillAndExpand"
                       VerticalOptions="FillAndExpand"/>

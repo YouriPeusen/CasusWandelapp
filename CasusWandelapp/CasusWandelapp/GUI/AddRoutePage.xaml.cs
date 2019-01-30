@@ -22,7 +22,6 @@ namespace CasusWandelapp.GUI
 		{
 			AddRouteLabel.Text = "Klik op een punt op de kaart om een punt neer te zetten";
 		}
-
 		private void DeleteRoutePointButton_Clicked(object sender, EventArgs e)
 		{
 			AddRouteLabel.Text = "Klik op een punt om deze te verwijderen";
