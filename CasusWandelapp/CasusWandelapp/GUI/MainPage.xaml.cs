@@ -110,5 +110,10 @@ namespace CasusWandelapp
             var span = new Xamarin.Forms.Maps.MapSpan(center, 1, 1);
             locationsMap.MoveToRegion(span);
         }
-    }
+
+		private void ToolbarItem_Clicked(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

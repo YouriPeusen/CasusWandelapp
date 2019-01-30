@@ -49,19 +49,9 @@ namespace CasusWandelapp.Droid
 			}
 		}
 
-		protected override void OnMapReady(Android.Gms.Maps.GoogleMap map)
+		protected override void OnMapReady(GoogleMap map)
 		{
 			base.OnMapReady(map);
-
-			var polylineOptions = new PolylineOptions();
-			polylineOptions.InvokeColor(0x66FF0000);
-
-			foreach (var position in routeCoordinates)
-			{
-				polylineOptions.Add(new LatLng(position.Latitude, position.Longitude));
-			}
-
-			NativeMap.AddPolyline(polylineOptions);
 
 			NativeMap.InfoWindowClick += OnInfoWindowClick;
 		}
@@ -90,6 +80,16 @@ namespace CasusWandelapp.Droid
 				intent.AddFlags(ActivityFlags.NewTask);
 				Android.App.Application.Context.StartActivity(intent);
 			}
+			
+			var polylineOptions = new PolylineOptions();
+			polylineOptions.InvokeColor(0x66FF0000);
+
+			foreach (var position in routeCoordinates)
+			{
+				polylineOptions.Add(new LatLng(position.Latitude, position.Longitude));
+			}
+
+			NativeMap.AddPolyline(polylineOptions);
 		}
 
 		public Android.Views.View GetInfoWindow(Marker marker)

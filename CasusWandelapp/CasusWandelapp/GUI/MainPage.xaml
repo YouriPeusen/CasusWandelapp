@@ -4,6 +4,12 @@
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              x:Class="CasusWandelapp.MainPage">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Filter"
+                     Icon="filtericon.png"
+                     Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
     <maps:Map x:Name="locationsMap" 
               MapType="Street"
               HorizontalOptions="FillAndExpand"

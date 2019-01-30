@@ -5,7 +5,11 @@
              x:Class="CasusWandelapp.Views.MyRoutes">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-            <Label Text="My POI Page" />
+            <Button x:Name="AddRouteButton"
+                    Margin="0,50,0,0" 
+                    Text="Route toevoegen" 
+                    Clicked="AddRouteButton_Clicked"
+                    Style="{StaticResource ButtonStyle}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

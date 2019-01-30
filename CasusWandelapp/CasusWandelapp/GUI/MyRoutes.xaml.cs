@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CasusWandelapp.GUI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,11 @@ namespace CasusWandelapp.Views
 		public MyRoutes ()
 		{
 			InitializeComponent();
+		}
+
+		private void AddRouteButton_Clicked(object sender, EventArgs e)
+		{
+			Navigation.PushModalAsync(new AddRoutePage());
 		}
 	}
 }

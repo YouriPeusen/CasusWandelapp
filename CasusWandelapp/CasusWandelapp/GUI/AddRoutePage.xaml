@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="CasusWandelapp.GUI.AddRoutePage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Label x:Name="AddRouteLabel"
+                       Text="Selecteer een optie"/>
+            </Grid>
+            <maps:Map Grid.Row="1"
+                      x:Name="locationsMap" 
+                      MapType="Street"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"/>
+            <Grid Grid.Row="2"
+                  VerticalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="AddRoutePointButton"
+                        Grid.Column="0"
+                        Text="Add"
+                        Clicked="AddRoutePointButton_Clicked"/>
+                <Button x:Name="DeleteRoutePointButton"
+                        Grid.Column="1"
+                        Text="Delete"
+                        Clicked="DeleteRoutePointButton_Clicked"/>
+                <Button x:Name="SaveRouteButton"
+                        Grid.Column="2"
+                        Text="Save"
+                        Clicked="SaveRouteButton_Clicked"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
