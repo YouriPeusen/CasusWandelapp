@@ -10,43 +10,31 @@ namespace CasusWandelapp.BU
     {
 		public Route()
 		{
-			var customMap = new CustomMap
-			{
-				MapType = MapType.Street
-			};
+		}
 
-			var pin = new RouteStartPoint
-			{
-				Type = PinType.Place,
-				Position = new Position(37.79752, -122.40183),
-				Label = "First pin try",
-				Address = "Adres van de pin",
-				Id = "Firstpin"
-			};
+		public void AddRoute()
+		{
 
-			customMap.RouteCoordinates.Add(new Position(37.797534, -122.401827));
-			customMap.RouteCoordinates.Add(new Position(37.797510, -122.402060));
-			customMap.RouteCoordinates.Add(new Position(37.790269, -122.400589));
-			customMap.RouteCoordinates.Add(new Position(37.790265, -122.400474));
-			customMap.RouteCoordinates.Add(new Position(37.790228, -122.400391));
-			customMap.RouteCoordinates.Add(new Position(37.790126, -122.400360));
-			customMap.RouteCoordinates.Add(new Position(37.789250, -122.401451));
-			customMap.RouteCoordinates.Add(new Position(37.788440, -122.400396));
-			customMap.RouteCoordinates.Add(new Position(37.787999, -122.399780));
-			customMap.RouteCoordinates.Add(new Position(37.786736, -122.398202));
-			customMap.RouteCoordinates.Add(new Position(37.786345, -122.397722));
-			customMap.RouteCoordinates.Add(new Position(37.785983, -122.397295));
-			customMap.RouteCoordinates.Add(new Position(37.785559, -122.396728));
-			customMap.RouteCoordinates.Add(new Position(37.780624, -122.390541));
-			customMap.RouteCoordinates.Add(new Position(37.777113, -122.394983));
-			customMap.RouteCoordinates.Add(new Position(37.776831, -122.394627));
+		}
 
-			customMap.RouteStartPoints = new List<RouteStartPoint> { pin };
-			customMap.Pins.Add(pin);
+		public void ShowRoutes()
+		{
 
-			customMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(37.79752, -122.40183), Distance.FromMiles(1.0)));
-			//customMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(5.959566, 50.881335), Distance.FromMiles(1.0)));
-			Content = customMap;
+		}
+
+		public void EditRoute()
+		{
+
+		}
+
+		public void DeleteRoute()
+		{
+
+		}
+
+		public void RateRoute()
+		{
+
 		}
 
 		public class RouteStartPoint : Pin

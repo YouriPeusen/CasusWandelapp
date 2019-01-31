@@ -12,6 +12,7 @@ using CasusWandelapp.BU;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Forms.Maps;
+using static CasusWandelapp.BU.Route;
 
 namespace CasusWandelapp
 {
@@ -22,8 +23,28 @@ namespace CasusWandelapp
 
         public MainPage()
         {
-            InitializeComponent();
-            GetPermissions();
+			//Doorgeven van coordinaten
+			BU.Route oRoute = new Route();
+			oRoute.ShowRoutes();
+
+			InitializeComponent();
+
+			var pin = new RouteStartPoint
+			{
+				Type = PinType.Place,
+				Position = new Xamarin.Forms.Maps.Position(50.881152, 5.960432),
+				Label = "First pin try",
+				Address = "Adres van de pin",
+				Id = "Firstpin"
+			};
+
+			locationsMap.RouteCoordinates.Add(new Xamarin.Forms.Maps.Position(50.880908, 5.960432));
+			locationsMap.RouteCoordinates.Add(new Xamarin.Forms.Maps.Position(50.879798, 5.960218));
+			locationsMap.RouteCoordinates.Add(new Xamarin.Forms.Maps.Position(50.878173, 5.963565));
+
+			locationsMap.RouteStartPoints = new List<RouteStartPoint> { pin };
+			locationsMap.Pins.Add(pin);
+			GetPermissions();
 		}
 
 		private async void GetPermissions()
@@ -77,7 +98,7 @@ namespace CasusWandelapp
                 await locator.StartListeningAsync(TimeSpan.Zero, 100);
             }
 
-            GetLocation();
+			GetLocation();
         }
 
         protected override void OnDisappearing()

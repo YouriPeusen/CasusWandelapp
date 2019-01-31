@@ -109,5 +109,11 @@ namespace CasusWandelapp.Droid
 			}
 			return null;
 		}
+
+		public Android.Views.View GetInfoContents (Marker marker)
+		{
+
+			return null;
+		}
 	}
 }
