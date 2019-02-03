@@ -7,8 +7,12 @@ namespace CasusWandelapp
 {
     public partial class App : Application
     {
-		public static string DatabaseLocation = string.Empty;
-        public App(string databaseLocation)
+		public static double ScreenHeight;
+		public static double ScreenWidth;
+		public static string DatabaseLocation = string.Empty
+
+
+		public App(string databaseLocation)
         {
             InitializeComponent();
 			MainPage = new NavigationPage(new LoginPage());

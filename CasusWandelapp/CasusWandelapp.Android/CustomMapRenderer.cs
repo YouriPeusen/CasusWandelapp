@@ -18,6 +18,7 @@ using Xamarin.Forms.Maps;
 using Xamarin.Forms.Maps.Android;
 using static CasusWandelapp.BU.Route;
 
+
 [assembly: ExportRenderer(typeof(CustomMap), typeof(CustomMapRenderer))]
 namespace CasusWandelapp.Droid
 {
