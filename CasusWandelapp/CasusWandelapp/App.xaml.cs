@@ -9,7 +9,7 @@ namespace CasusWandelapp
     {
 		public static double ScreenHeight;
 		public static double ScreenWidth;
-		public static string DatabaseLocation = string.Empty
+		public static string DatabaseLocation = string.Empty;
 
 
 		public App(string databaseLocation)

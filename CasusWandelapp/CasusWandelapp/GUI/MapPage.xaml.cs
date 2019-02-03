@@ -26,7 +26,7 @@ namespace CasusWandelapp.GUI
                 Url = "http://xamarin.com/about/"
             };
 
-            customMap.CustomPins = new List<CustomPin> { pin };
+            //customMap.CustomPins = new List<CustomPin> { pin };
             customMap.Pins.Add(pin);
             customMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(50.879601, 5.959589), Distance.FromMiles(1.0)));
         }

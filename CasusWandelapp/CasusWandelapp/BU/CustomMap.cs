@@ -11,7 +11,7 @@ namespace CasusWandelapp.BU
     {
 		public List<Position> RouteCoordinates { get; set; }
 
-        public List<CustomPin> CustomPins { get; set; }
+        //public List<CustomPin> CustomPins { get; set; }
 
         public List<RouteStartPoint> RouteStartPoints { get; set; }
 
