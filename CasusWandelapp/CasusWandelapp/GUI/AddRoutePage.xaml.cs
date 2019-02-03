@@ -1,4 +1,6 @@
-﻿using CasusWandelapp.Views;
+﻿using CasusWandelapp.Helpers;
+using CasusWandelapp.Views;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +31,30 @@ namespace CasusWandelapp.GUI
 
 		private void SaveRouteButton_Clicked(object sender, EventArgs e)
 		{
-			Navigation.PushModalAsync(new MyRoutes());
+			RouteDB route = new RouteDB()
+			{
+				RouteName = RouteNameEntry.Text.ToString(),
+				RouteLenght = RouteLengthEntry.Text.ToString(),
+				RouteDifficulty = RouteDifficultyEntry.Text.ToString()
+			};
+
+
+			using (SQLiteConnection conn = new SQLiteConnection(App.DatabaseLocation))
+			{
+				conn.CreateTable<RouteDB>();
+				int rows = conn.Insert(route);
+
+				if (rows > 0)
+				{
+					DisplayAlert("Succes", "Route succesfully added.", "OK");
+				}
+				else
+				{
+					DisplayAlert("Failure", "Failed to add Route", "OK");
+				}
+			}
+
+				Navigation.PushModalAsync(new MyRoutes());
 		}
 	}
 }

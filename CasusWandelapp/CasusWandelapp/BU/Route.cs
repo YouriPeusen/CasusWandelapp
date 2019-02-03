@@ -10,6 +10,7 @@ namespace CasusWandelapp.BU
     {
 		public Route()
 		{
+
 		}
 
 		public void AddRoute()

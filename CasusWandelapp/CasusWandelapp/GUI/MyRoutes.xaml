@@ -4,7 +4,64 @@
 			 xmlns:local="clr-namespace:CasusWandelapp.BU"
              x:Class="CasusWandelapp.Views.MyRoutes">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <StackLayout Orientation="Vertical">
+            
+            <ListView x:Name="routeListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!--<StackLayout Orientation="Horizontal"
+                                         Padding="20">
+                                <StackLayout Orientation="Vertical">
+                                    <Label x:Name="RouteNameLabel"
+                                           Text="{Binding RouteName}"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="StartAndExpand"/>
+                                    <Label x:Name="RouteLengthLabel"
+                                           Text="{Binding RouteLength}"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="StartAndExpand"/>
+                                </StackLayout>
+                            </StackLayout>-->
+                            <Frame OutlineColor="Accent"
+                               Padding="5">
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="StartAndExpand">
+
+                                    <BoxView Color="Red"/>
+
+                                    <StackLayout Orientation="Vertical"
+                                                 VerticalOptions="Fill">
+                                    <!--<TextCell Text="{Binding RouteName}"/>-->
+                                    <Label x:Name="RouteNameLabel"
+                                           Text="{Binding RouteName}"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="FillAndExpand"/>
+                                    <Label x:Name="RouteLengthLabel"
+                                           Text="{Binding RouteLength}"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="FillAndExpand"/>
+                                    <Label x:Name="RouteDifficultyLabel"
+                                           Text="{Binding RouteDifficulty}"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="FillAndExpand"/>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Vertical"
+                                                 VerticalOptions="Fill">
+                                        <Label Text="Delete"
+                                           VerticalOptions="End"/>
+                                        <Label Text="Edit"
+                                           VerticalOptions="End"/>
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
             <Button x:Name="AddRouteButton"
                     Margin="0,50,0,0" 
                     Text="Route toevoegen" 

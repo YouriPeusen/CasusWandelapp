@@ -23,12 +23,13 @@ namespace CasusWandelapp
 
         public MainPage()
         {
-			//Doorgeven van coordinaten
+			//Onderstaande fucntie zou de data uit de database halen
 			BU.Route oRoute = new Route();
 			oRoute.ShowRoutes();
 
 			InitializeComponent();
 
+			//Omdat er geen gebruik wordt gemaakt van een database wordt de data hardcoded meegegeven
 			var pin = new RouteStartPoint
 			{
 				Type = PinType.Place,

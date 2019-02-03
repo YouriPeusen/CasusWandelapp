@@ -21,7 +21,11 @@ namespace CasusWandelapp.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new CasusWandelapp.App());
+			string dbName = "travel_db.sqlite";
+			string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+			string fullPath = Path.Combine(folderPath, dbName);
+
+			LoadApplication(new CasusWandelapp.App(fullPath));
         }
     }
 }
