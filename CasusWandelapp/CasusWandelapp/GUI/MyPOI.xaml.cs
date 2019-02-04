@@ -8,7 +8,6 @@ using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 using static CasusWandelapp.BU.Route;
 using static CasusWandelapp.BU.POI;
-using static CasusWandelapp.BU.CustomPin;
 using static CasusWandelapp.BU.CustomMap;
 
 namespace CasusWandelapp.Views

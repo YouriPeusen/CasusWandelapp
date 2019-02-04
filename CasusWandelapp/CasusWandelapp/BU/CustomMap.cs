@@ -5,7 +5,6 @@ using Xamarin.Forms.Maps;
 using static CasusWandelapp.BU.Route;
 using static CasusWandelapp.BU.POI;
 
-
 namespace CasusWandelapp.BU
 {
     public class CustomMap : Map
