@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms.Maps;
 using static CasusWandelapp.BU.Route;
+using static CasusWandelapp.BU.CustomPin;
 
 
 namespace CasusWandelapp.BU
@@ -11,7 +12,6 @@ namespace CasusWandelapp.BU
     {
 		public List<Position> RouteCoordinates { get; set; }
 
-        //public List<CustomPin> CustomPins { get; set; }
 
         public List<RouteStartPoint> RouteStartPoints { get; set; }
 
