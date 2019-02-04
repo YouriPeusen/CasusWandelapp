@@ -23,6 +23,11 @@ namespace CasusWandelapp.BU
 
         public string Url { get; set; }
 
+        /* Route end point & start point voor history
+        public static double RouteStartPoint { get; internal set; }
+        public static double RouteEndPoint { get; internal set; }
+        */
+
         public CustomMap ()
 		{
 			RouteCoordinates = new List<Position> ();
