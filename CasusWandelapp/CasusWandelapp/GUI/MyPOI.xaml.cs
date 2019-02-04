@@ -19,6 +19,7 @@ namespace CasusWandelapp.Views
         {
             InitializeComponent();
 
+            //Toevoegen van pin op map
             var pin = new RouteStartPoint
             {
                 Type = PinType.Place,
@@ -28,12 +29,14 @@ namespace CasusWandelapp.Views
                 Id = "Beschrijving"
             };
 
+            //Toevoegen van coordinaten 
             customMap.POICoordinates.Add(new Position(37.790136, -122.400236));
             customMap.POICoordinates.Add(new Position(37.789345, -122.401253));
             customMap.POICoordinates.Add(new Position(37.786264, -122.398471));
             customMap.POICoordinates.Add(new Position(37.785942, -122.397357));
             customMap.POICoordinates.Add(new Position(37.776824, -122.394353));
-
+                        
+            //Points toevoegen aan lijst
             customMap.POIPoints = new List<RouteStartPoint> { pin };
             customMap.Pins.Add(pin);
 
