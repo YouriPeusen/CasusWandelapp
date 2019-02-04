@@ -9,7 +9,12 @@ namespace CasusWandelapp.BU
     public class POI : ContentPage
     {
 
-        public List<POIpoint> POIpoints;
+        public class POIpoint
+        {
+            public List<POIpoint> POIpoints;
+        }
+
+        public string Url { get; set; }
 
         public List<Position> POICoordinates { get; set; }
 
@@ -38,8 +43,6 @@ namespace CasusWandelapp.BU
 
         }
 
-        public class POIpoint
-        {
-        }
+
     }
 }

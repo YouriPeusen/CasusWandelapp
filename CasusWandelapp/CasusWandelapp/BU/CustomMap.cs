@@ -4,6 +4,7 @@ using System.Text;
 using Xamarin.Forms.Maps;
 using static CasusWandelapp.BU.Route;
 using static CasusWandelapp.BU.CustomPin;
+using static CasusWandelapp.BU.POI;
 
 
 namespace CasusWandelapp.BU
@@ -11,7 +12,6 @@ namespace CasusWandelapp.BU
     public class CustomMap : Map
     {
 		public List<Position> RouteCoordinates { get; set; }
-
 
         public List<RouteStartPoint> RouteStartPoints { get; set; }
 

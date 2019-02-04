@@ -25,8 +25,7 @@ namespace CasusWandelapp.BU
                 MapType = MapType.Street,
                 WidthRequest = App.ScreenWidth,
                 HeightRequest = App.ScreenHeight
-            };
-          
+            };         
 
         var pin = new CustomPin
             {
@@ -36,7 +35,6 @@ namespace CasusWandelapp.BU
                 Address = "Heerlen",
                 Id = "POI Zuyd",
                 Url = "https://www.zuyd.nl/"
-
             };
 
         }
