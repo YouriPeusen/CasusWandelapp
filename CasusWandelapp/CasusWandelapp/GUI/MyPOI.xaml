@@ -4,54 +4,10 @@
 			 xmlns:local="clr-namespace:CasusWandelapp.BU"
              x:Class="CasusWandelapp.Views.MyPOI">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-
-            <ListView x:Name="POIListView">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Frame OutlineColor="Accent"
-                               Padding="5">
-                                <StackLayout Orientation="Horizontal"
-                                             HorizontalOptions="StartAndExpand">
-
-                                    <BoxView Color="Red"/>
-
-                                    <StackLayout Orientation="Vertical"
-                                                 VerticalOptions="Fill">
-                                        <Label x:Name="POINameLabel"
-                                           Text="{Binding POIName}"
-                                           VerticalOptions="Center"
-                                           HorizontalOptions="FillAndExpand"/>
-                                        <Label x:Name="POIDescriptionLabel"
-                                           Text="{Binding POIDescription}"
-                                           VerticalOptions="Center"
-                                           HorizontalOptions="FillAndExpand"/>
-                                        <Label x:Name="POIPicture"
-                                           Text="{Binding POIPicture}"
-                                           VerticalOptions="Center"
-                                           HorizontalOptions="FillAndExpand"/>
-                                    </StackLayout>
-
-                                    <StackLayout Orientation="Vertical"
-                                                 VerticalOptions="Fill">
-                                        <Label Text="Delete"
-                                           VerticalOptions="End"/>
-                                        <Label Text="Edit"
-                                           VerticalOptions="End"/>
-                                    </StackLayout>
-                                </StackLayout>
-                            </Frame>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
-            <Button x:Name="AddPOIButton"
-                    Margin="0,50,0,0" 
-                    Text="POI toevoegen" 
-                    Clicked="AddPOIButton_Clicked"
-                    Style="{StaticResource ButtonStyle}"/>
-        </StackLayout>
+        <local:CustomMap x:Name="customMap" 
+                         MapType="Street" 
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand" />
     </ContentPage.Content>
 </ContentPage>
+    

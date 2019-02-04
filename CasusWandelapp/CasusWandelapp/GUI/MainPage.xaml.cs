@@ -34,9 +34,9 @@ namespace CasusWandelapp
 			{
 				Type = PinType.Place,
 				Position = new Xamarin.Forms.Maps.Position(50.881152, 5.960432),
-				Label = "First pin try",
-				Address = "Adres van de pin",
-				Id = "Firstpin"
+				Label = "POI/Route naam",
+				Address = "POI/Route beschrijving",
+				Id = "Foto POI/Route"
 			};
 
 			locationsMap.RouteCoordinates.Add(new Xamarin.Forms.Maps.Position(50.880908, 5.960432));
@@ -46,7 +46,9 @@ namespace CasusWandelapp
 			locationsMap.RouteStartPoints = new List<RouteStartPoint> { pin };
 			locationsMap.Pins.Add(pin);
 			GetPermissions();
+
 		}
+
 
 		private async void GetPermissions()
         {
