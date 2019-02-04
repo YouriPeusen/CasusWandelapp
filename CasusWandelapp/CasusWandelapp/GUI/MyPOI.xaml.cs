@@ -29,16 +29,16 @@ namespace CasusWandelapp.Views
                 Id = "Beschrijving"
             };
 
-            customMap.RouteCoordinates.Add(new Position(37.790126, -122.400360));
-            customMap.RouteCoordinates.Add(new Position(37.789250, -122.401451));
-            customMap.RouteCoordinates.Add(new Position(37.786736, -122.398202));
-            customMap.RouteCoordinates.Add(new Position(37.785983, -122.397295));
-            customMap.RouteCoordinates.Add(new Position(37.776831, -122.394627));
+            customMap.POICoordinates.Add(new Position(37.790136, -122.400236));
+            customMap.POICoordinates.Add(new Position(37.789345, -122.401253));
+            customMap.POICoordinates.Add(new Position(37.786264, -122.398471));
+            customMap.POICoordinates.Add(new Position(37.785942, -122.397357));
+            customMap.POICoordinates.Add(new Position(37.776824, -122.394353));
 
-            customMap.RouteStartPoints = new List<RouteStartPoint> { pin };
+            customMap.POIPoints = new List<RouteStartPoint> { pin };
             customMap.Pins.Add(pin);
 
-            customMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(37.79752, -122.40183), Distance.FromMiles(1.0)));
+            customMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(37.786264, -122.398471), Distance.FromMiles(1.0)));
         }
     }
 }

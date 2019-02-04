@@ -3,21 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using static CasusWandelapp.BU.Route;
+using static CasusWandelapp.BU.CustomMap;
 
 namespace CasusWandelapp.BU
 {
+    //Zie CustomMap class voor aanvulling van POI class
     public class POI : ContentPage
     {
-
-        public class POIpoint
-        {
-            public List<POIpoint> POIpoints;
-        }
-
-        public string Url { get; set; }
-
-        public List<Position> POICoordinates { get; set; }
-
+                                 
         public POI()
         {
 
